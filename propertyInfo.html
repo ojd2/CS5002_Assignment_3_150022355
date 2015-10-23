@@ -1,0 +1,92 @@
+<html>
+<head>
+<title>England, Wales and N. Ireland Property Data</title>
+<style type="text/css">
+table {
+	border: 1px solid grey;
+    border-collapse:collapse;    
+}
+
+td {
+	border-top: 0;
+    border-bottom: 0;
+    border-left: 1px solid grey;
+    padding: 4px;
+    
+}
+
+th {
+    text-align: left;
+    border-bottom: 1px solid grey;
+    border-left: 1px solid grey;
+    padding: 4px;
+}
+
+#minMax, #daySelect, #timeSelect {
+  margin-bottom: 2ex;
+}
+
+</style>
+<script src="propertyData.js"></script>
+<script src="propertyInfo.js"></script>
+</head>
+<body onload="initialiseWeatherInfo()">
+    <div style="width: 80%; text-align: center;">
+        <h1>England, Wales and N. Ireland Property Data</h1>
+        <p>
+            The Property Transaction data contained on this site was gathered from <a
+                href="http://data.gov.uk/dataset/land-registry-monthly-price-paid-data">data.gov</a>.
+        </p>
+        <!-- Selection boxes -->
+        <label for="firstDaySelect">Please select the start date: </label>
+        <select id="firstDaySelect">
+            <!--  <option value="2013-10-28">2013-10-28</option> -->
+        </select><br />
+        <label for="lastDaySelect">Please select the end date: </label>        
+        <select id="lastDaySelect">
+            <!--  <option value="2013-10-28">2013-10-28</option> -->
+        </select><br />   
+        <label for="sortBy">Sort by: </label>        
+        <select id="sortBy">
+            <option value="Price">Price</option>
+            <option value="Postcode">Postcode</option>
+            <option value="PropertyType">Property Type</option>
+        </select>      
+        <!-- Table for the maximum and minimum measurements -->
+        <center>
+            <table id="minMax">
+                <tr>
+                    <th>Measure</th>                    
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>Postcode</th>
+                </tr>
+                <tr id="minPrice">
+                    <td>Minimum Price:</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                <tr id="maxPrice">
+                    <td>Maximum Price:</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+        </center>        
+        <!-- The table containing all the weather data -->
+        <center>
+            <table id="propertyData">
+                <tr>
+                    <th>Price Sold</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>Postcode</th>
+                    <th>Tenure</th>
+                    <th>Property Type</th>
+                    <th>New build</th>
+                <tr>
+            </table>
+        </center>
+    </div>
+</body>
+</html>
