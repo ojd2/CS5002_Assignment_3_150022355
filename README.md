@@ -1,3 +1,5 @@
+# Weather Data Analysis Program in JavaScript
+
 ### Program Overview
 The following code involved a lot of intricate and complex procedures in order to fulfill the practical requirements. There were a number of different methods and algorithms to be used in order to efficiently extract data into the HTML table. My main aim for this practical was to explore iterative and decomposable algorithms that could be used together. The first aim of the code is to establish and find both ```Observation Time``` and ```Observation Date``` in the weather data file. If this could be executed in a small amount of runtime, it would enable the program to perform and execute the next set of instructions efficiently. Subsequently, there are two global variables initiated at the beginning of the code in order to be used as storage for a selected date value and another to store all data associated with the selected date value.
 ```JavaScript
